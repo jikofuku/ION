@@ -1,30 +1,82 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Jikø Fükü</title>
 
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-xlarge.css">
+    </noscript>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--[if lte IE 8]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
     <style>
+        /* General Reset and Dark Theme */
         html, body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            height: 100%;
+            height: 100%; /* Ensure the body takes full height */
             background-color: #000;
             color: #fff;
             width: 100%;
             overflow-x: hidden;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Make body behave like a column */
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #111;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 a {
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
         }
 
         main {
-            flex: 1;
+            flex: 1; /* Takes up remaining space */
             width: 100%;
             padding: 20px;
+        }
+
+        section#banner .inner {
+            text-align: center;
         }
 
         footer {
@@ -34,7 +86,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: auto;
+            margin-top: auto; /* Pushes footer to the bottom if space remains */
+            width: 100%;
         }
 
         footer div {
@@ -63,10 +116,11 @@
     </style>
 </head>
 
-<body>
-    <header>
+<body id="top">
+
+    <header id="header" class="skel-layers-fixed">
         <h1><a href="#">Jikø Fükü</a></h1>
-        <nav>
+        <nav id="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="left-sidebar.html">Left Sidebar</a></li>
@@ -77,14 +131,16 @@
         </nav>
     </header>
 
+    <section id="banner">
+        <div class="inner">
+            <ul class="actions">
+                <li><a href="#content" class="button big special">SHOP NOW</a></li>
+            </ul>
+        </div>
+    </section>
+
     <main>
-        <section id="banner">
-            <div class="inner">
-                <ul class="actions">
-                    <li><a href="#content" class="button big special">SHOP NOW</a></li>
-                </ul>
-            </div>
-        </section>
+        <!-- Your main content goes here -->
     </main>
 
     <footer>
@@ -102,5 +158,6 @@
             <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
         </div>
     </footer>
+
 </body>
 </html>

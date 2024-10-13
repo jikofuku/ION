@@ -977,17 +977,35 @@
 				right: 0;
 			}
 
-/* Reset CSS: Consistent padding, margin, and box sizing */
+/* Reset margins and paddings for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the body and html fill the entire screen */
+/* Ensure the body and html fill the entire viewport */
 html, body {
     height: 100%;
-    overflow: hidden; /* Prevent any scrollbars */
+}
+
+/* Banner Section */
+#banner {
+    position: relative;
+    width: 100%;  /* Full width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Banner Image */
+#banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;  /* Make the image fill the width */
+    height: 100%; /* Make the image fill the height */
+    object-fit: cover; /* Ensure the image covers without stretching */
+    transform: translate(-50%, -50%); /* Center the image */
 }
 
 

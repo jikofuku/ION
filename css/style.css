@@ -971,25 +971,43 @@
 				right: 0;
 			}
 			
-			/* Logo Styling */
+/* Logo Styling */
 header .logo {
     display: flex;
     align-items: center;
     position: absolute;
     top: 10px;
-    left: 10px;
 }
 
-header .logo img {
-    width: 150px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+/* Adjust the logo positioning for desktop */
+header .logo {
+    left: 10px; /* Keep the logo on the left for desktop */
 }
 
-#nav {
-    margin-left: 180px; /* Ensure nav doesn't overlap with the logo */
-}
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    header .logo {
+        position: relative; /* Change position to relative for centering */
+        left: 50%; /* Center the logo */
+        transform: translateX(-50%); /* Adjust for centering */
+        top: 5px; /* Slightly adjust top position if needed */
+    }
 
-			
+    #nav {
+        margin-left: 0; /* Reset margin for mobile */
+        text-align: center; /* Center the nav items */
+    }
+    
+    #nav ul {
+        padding: 0; /* Reset padding for the ul */
+        margin: 0; /* Reset margin for the ul */
+    }
+
+    #nav li {
+        display: block; /* Stack nav items vertically on mobile */
+        margin: 5px 0; /* Add some margin for spacing */
+    }
+}
 
 	/* Footer styling */
         footer {

@@ -977,30 +977,40 @@
 				right: 0;
 			}
 
-/* Reset padding and margins */
+/* Resetting default margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the body and html fill the viewport */
+/* Ensure body and html fill the viewport */
 html, body {
     height: 100%;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden; /* Prevents scrollbars */
 }
 
-/* Banner Section */
+/* Styling the Banner Section */
 #banner {
+    position: relative;
     width: 100%; /* Full width of the viewport */
     height: 70vh; /* 70% of the viewport height */
-    background-image: url('images/banner.webp'); /* Your banner image */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    background-attachment: scroll; /* Prevent fixed background quirks */
-    transition: none; /* Eliminate potential transition issues */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hides any overflow from the image */
+    background-color: #000; /* Fallback background color */
 }
+
+/* Styling the Banner Image */
+#banner img {
+    width: 100%; /* Image scales to fit the width */
+    height: 100%; /* Image also scales to fit the height */
+    object-fit: cover; /* Ensures the image fills the section without distortion */
+    object-position: center; /* Keeps the image centered */
+    transition: none; /* Prevents any transition effects on load */
+}
+
 
 	/* Footer styling */
         footer {

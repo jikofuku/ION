@@ -972,36 +972,24 @@
 			}
 			
 /* General Logo Styling */
-header .logo-desktop {
+header .logo {
     display: flex;
     align-items: center;
-    position: relative; /* Keep it in normal flow */
-}
-
-header .logo-mobile {
-    display: none; /* Hide mobile logo by default */
+    position: absolute; /* Position it absolutely for desktop */
+    top: 10px; /* Align with the top */
+    left: 10px; /* Keep it left on desktop */
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
-    header {
-        position: relative; /* Ensure header is relative */
-        padding: 10px 0; /* Add padding for spacing */
+    header .logo {
+        position: relative; /* Change to relative positioning for mobile */
+        left: 50%; /* Center the logo */
+        transform: translateX(-50%); /* Adjust to center it */
+        top: 5px; /* Adjust top spacing if needed */
     }
 
-    header .logo-desktop {
-        display: none; /* Hide the desktop logo on mobile */
-    }
-
-    header .logo-mobile {
-        display: flex; /* Show mobile logo */
-        justify-content: center; /* Center it */
-        align-items: center; /* Center vertically */
-        position: relative; /* Position normally */
-        top: 10px; /* Adjust spacing from the top */
-        z-index: 10; /* Ensure it stays on top */
-    }
-
+    /* Ensure the nav is positioned normally */
     nav {
         position: relative; /* Position nav normally */
         text-align: center; /* Center nav items */
@@ -1017,6 +1005,7 @@ header .logo-mobile {
         margin: 0 10px; /* Space between items */
     }
 }
+
 
 
 	/* Footer styling */

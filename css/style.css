@@ -777,7 +777,7 @@
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.25);
-			color: #666f77 !important;
+			color: #77666a !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -978,6 +978,7 @@
 			}
 
 /* Reset margins and paddings for consistency */
+/* Reset margins and paddings for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -987,26 +988,33 @@
 /* Ensure the body and html fill the entire viewport */
 html, body {
     height: 100%;
+    overflow: hidden; /* Avoid unnecessary scrollbars */
 }
 
 /* Banner Section */
 #banner {
     position: relative;
     width: 100%; /* Full width of the page */
-    height: 70vh; /* Adjust height: 70% of the viewport */
-    display: flex;
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
+    height: 70vh; /* 70% of the viewport height */
     overflow: hidden; /* Prevent scrollbars */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
     background-color: #000; /* Fallback background color */
 }
 
 /* Banner Image */
 #banner img {
-    max-width: 100%;  /* Image won’t exceed the banner width */
-    max-height: 100%; /* Image won’t exceed the banner height */
-    object-fit: contain; /* Ensure the entire image is visible */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Ensure the image fills the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%; /* Ensure it covers the banner height */
+    transform: translate(-50%, -50%); /* Center the image */
+    object-fit: cover; /* Make sure it covers without stretching */
 }
+
 
 
         /* Footer styling */

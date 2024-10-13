@@ -885,8 +885,8 @@
 	}
 
 	#header {
-		background: #fff;
-		color: #555f66;
+		background: #000000;
+		color: #ffffff;
 		cursor: default;
 		height: 3em;
 		left: 0;
@@ -899,7 +899,7 @@
 	}
 
 		#header h1 {
-			color: #666f77;
+			color: #ffffff;
 			font-weight: 500;
 			height: inherit;
 			left: 1.25em;
@@ -942,13 +942,13 @@
 						-o-transition: color 0.2s ease-in-out;
 						-ms-transition: color 0.2s ease-in-out;
 						transition: color 0.2s ease-in-out;
-						color: #555f66;
+						color: #ffffff;
 						display: inline-block;
 						text-decoration: none;
 					}
 
 						#header nav > ul > li a:hover {
-							color: #629DD1;
+							color: #ffffff;
 						}
 
 					#header nav > ul > li:first-child {

@@ -978,6 +978,7 @@
 			}
 
 /* Reset margins and paddings for consistency */
+/* Reset margins and paddings for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -987,18 +988,19 @@
 /* Ensure the body and html fill the entire viewport */
 html, body {
     height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Banner Section */
 #banner {
-    position: relative;
-    width: 100%; /* Full width of the page */
-    height: 70vh; /* Adjust height: 70% of the viewport */
-    display: flex;
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
-    overflow: hidden; /* Prevent scrollbars */
-    background-color: #000; /* Fallback background color */
+    width: 100%;          /* Full width of the page */
+    height: 70vh;         /* 70% of the viewport height */
+    background-image: url("images/banner.webp");  /* Replace with the correct path */
+    background-size: contain;  /* Keep the original aspect ratio */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Avoid repetition */
+    background-color: #000;        /* Fallback color */
+    transition: background-size 0.3s ease-in-out;  /* Smooth scaling */
 }
 
 /* Banner Image */

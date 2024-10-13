@@ -978,7 +978,6 @@
 			}
 
 /* Reset margins and paddings for consistency */
-/* Reset margins and paddings for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -993,21 +992,21 @@ html, body {
 
 /* Banner Section */
 #banner {
-    width: 100%;          /* Full width of the page */
-    height: 70vh;         /* 70% of the viewport height */
-    background-image: url("images/banner.webp");  /* Replace with the correct path */
-    background-size: contain;  /* Keep the original aspect ratio */
-    background-position: center;  /* Center the image */
-    background-repeat: no-repeat;  /* Avoid repetition */
-    background-color: #000;        /* Fallback color */
-    transition: background-size 0.3s ease-in-out;  /* Smooth scaling */
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Banner Image */
 #banner img {
-    max-width: 100%;  /* Image won’t exceed the banner width */
-    max-height: 100%; /* Image won’t exceed the banner height */
-    object-fit: contain; /* Ensure the entire image is visible */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;  /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the banner */
+    max-width: none; /* Prevent scaling the width */
+    transform: translate(-50%, -50%); /* Center the image */
 }
 
 

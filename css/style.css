@@ -1062,12 +1062,12 @@
 }
 
 #footer a {
-    color: #bbb; /* Light gray links for better readability */
+    color: #111; 
     transition: color 0.3s; /* Smooth transition on hover */
 }
 
 #footer a:hover {
-    color: #ffffff; /* Change link color on hover for emphasis */
+    color: #111; 
 }
 
 .copyright {
@@ -1085,5 +1085,4 @@
 }
 
 #footer .icons a {
-    color: #bbb; /* Ensures icons are the same color */
-}
+    color: #111;

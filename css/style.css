@@ -981,7 +981,7 @@
 
 #banner {
     background-color: #000; /* Change to black */
-    background-image: url("../images/banner.jpg"); /* Ensure the image path is correct */
+    background-image: url("images/banner.webp"); /* Ensure the image path is correct */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

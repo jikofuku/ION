@@ -971,53 +971,58 @@
 				right: 0;
 			}
 			
-/* General Logo Styling */
-header .logo-desktop {
+/* Logo Container */
+.logo-container {
     display: flex;
-    align-items: center;
-    position: relative; /* Keep it in normal flow */
+    justify-content: center; /* Center the logo */
+    align-items: center; /* Center vertically */
+    position: relative; /* Position normally */
+    z-index: 10; /* Ensure it stays on top */
 }
 
-header .logo-mobile {
-    display: none; /* Hide mobile logo by default */
+/* Logo Styling */
+.logo {
+    max-width: 150px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Mobile View Adjustments */
+/* Mobile Specific Adjustments */
 @media (max-width: 768px) {
-    header {
-        position: relative; /* Ensure header is relative */
-        padding: 10px 0; /* Add padding for spacing */
-    }
-
-    header .logo-desktop {
-        display: none; /* Hide the desktop logo on mobile */
-    }
-
-    header .logo-mobile {
-        display: flex; /* Show mobile logo */
-        justify-content: center; /* Center it */
-        align-items: center; /* Center vertically */
+    #header {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
         position: relative; /* Position normally */
-        top: 10px; /* Adjust spacing from the top */
-        z-index: 10; /* Ensure it stays on top */
+        padding: 10px 0; /* Add padding */
     }
 
-    nav {
-        position: relative; /* Position nav normally */
-        text-align: center; /* Center nav items */
+    #header nav {
+        position: absolute; /* Position nav absolutely */
+        top: 50px; /* Move nav below the logo */
+        right: 1.25em; /* Keep the nav to the right */
+        display: flex; /* Display as flex to allow center alignment */
+        flex-direction: row; /* Keep items in a row */
+        justify-content: flex-end; /* Align items to the right */
+        width: 100%; /* Full width */
     }
 
-    nav ul {
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
+    #header nav > ul {
+        display: flex; /* Flexbox for nav items */
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
     }
 
-    nav li {
-        display: inline-block; /* Keep nav items horizontal */
-        margin: 0 10px; /* Space between items */
+    #header nav > ul > li {
+        margin-left: 2em; /* Space between nav items */
+        padding-left: 0;
+    }
+
+    #header nav > ul > li a {
+        color: #ffffff; /* Keep link color */
+        text-decoration: none; /* Remove underline */
     }
 }
-
 
 	/* Footer styling */
         footer {

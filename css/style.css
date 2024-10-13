@@ -971,44 +971,40 @@
 				right: 0;
 			}
 			
-/* Logo Styling */
+/* General Logo Styling */
 header .logo {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 10px;
+    position: absolute; /* Position it absolutely for desktop */
+    top: 10px; /* Align with the top */
+    left: 10px; /* Keep it left on desktop */
 }
 
-/* Adjust the logo positioning for desktop */
-header .logo {
-    left: 10px; /* Keep the logo on the left for desktop */
-}
-
-/* Adjustments for mobile view */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
     header .logo {
-        position: relative; /* Change position to relative for centering */
+        position: relative; /* Change to relative positioning for mobile */
         left: 50%; /* Center the logo */
-        transform: translateX(-50%); /* Adjust for centering */
-        top: 5px; /* Slightly adjust top position if needed */
+        transform: translateX(-50%); /* Adjust to center it */
+        top: 5px; /* Adjust top spacing if needed */
     }
 
-    #nav {
-        margin-left: 0; /* Reset margin for mobile */
-        text-align: center; /* Center the nav items */
-    }
-    
-    #nav ul {
-        padding: 0; /* Reset padding for the ul */
-        margin: 0; /* Reset margin for the ul */
+    /* Ensure the nav is positioned normally */
+    nav {
+        position: relative; /* Position nav normally */
+        text-align: center; /* Center nav items */
     }
 
-    #nav li {
-        display: block; /* Stack nav items vertically on mobile */
-        margin: 5px 0; /* Add some margin for spacing */
+    nav ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav li {
+        display: inline-block; /* Keep nav items horizontal */
+        margin: 0 10px; /* Space between items */
     }
 }
-
 
 
 	/* Footer styling */

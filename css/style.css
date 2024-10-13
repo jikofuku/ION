@@ -994,6 +994,15 @@ html, body {
 }
 
 /* Banner Image */
+/* Banner Section */
+#banner {
+    position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: 70vh; /* 70% of the viewport height */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Banner Image */
 #banner img {
     position: absolute; /* Positioning for centering */
     top: 50%; /* Center vertically */
@@ -1003,7 +1012,6 @@ html, body {
     min-height: 100%; /* Ensure it covers the height */
     transform: translate(-50%, -50%); /* Center the image */
     object-fit: cover; /* Ensures it covers the space */
-    /* Optional: Prevents flickering during loading */
     transition: opacity 0.5s ease; 
     opacity: 0; /* Start with an invisible image */
 }
@@ -1012,6 +1020,18 @@ html, body {
 #banner img.loaded {
     opacity: 1; /* Fade in */
 }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    #banner {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+    #banner img {
+        object-fit: contain; /* Ensures the entire image is visible */
+        min-height: auto; /* Reset min-height for proper scaling */
+    }
+}
+
 
 	/* Footer styling */
         footer {

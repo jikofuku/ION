@@ -1054,39 +1054,36 @@
 			}
 
 /* Footer */
+#footer {
+    background: #111; /* Dark background */
+    padding: 2em 0; /* Reduced padding for a more compact footer */
+    color: #fff; /* Set footer text color to white for better contrast */
+    text-align: center; /* Centered text for a cleaner look */
+}
 
-	#footer {
-		background: #f8f8f8;
-		padding: 4em 0 6em 0;
-	}
+#footer a {
+    color: #bbb; /* Light gray links for better readability */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
 
-		#footer a {
-			color: inherit;
-		}
+#footer a:hover {
+    color: #ffffff; /* Change link color on hover for emphasis */
+}
 
-		.copyright {
-			color: #bbb;
-			font-size: 0.9em;
-			padding: 0;
-			text-align: center;
-			width: 100%;
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
+.copyright {
+    font-size: 0.9em;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0; /* Simplified margins */
+}
 
-			.copyright{
-				display: inline-block;
-				list-style: none;
-				margin-left: 1.5em;
-				padding-left: 1.5em;
-			}
+.copyright {
+    display: inline-block;
+    list-style: none;
+    margin: 0; /* Removed extra margins */
+    padding: 0; /* Removed extra padding */
+}
 
-				.copyright{
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-
-		#footer .icons a {
-			color: #bbb;
-		}
+#footer .icons a {
+    color: #bbb; /* Ensures icons are the same color */
+}

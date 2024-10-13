@@ -977,14 +977,14 @@
 				right: 0;
 			}
 
-/* Reset margins and paddings for consistency */
+/* Reset padding and margins */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure body and html fill the viewport */
+/* Ensure the body and html fill the viewport */
 html, body {
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
@@ -992,34 +992,16 @@ html, body {
 
 /* Banner Section */
 #banner {
-    position: relative;
-    width: 100%; /* Full width of the page */
+    width: 100%; /* Full width of the viewport */
     height: 70vh; /* 70% of the viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Hide any overflow */
-    background-color: #000; /* Fallback background color */
+    background-image: url('images/banner.webp'); /* Your banner image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: scroll; /* Prevent fixed background quirks */
+    transition: none; /* Eliminate potential transition issues */
 }
 
-/* Banner Image */
-#banner img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto; /* Keep the image's aspect ratio */
-    height: 100%; /* Make sure the image fills the height */
-    min-width: 100%; /* Ensure it covers the width without shrinking */
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures it covers the space without distortion */
-    transition: opacity 0.2s ease-in; /* Smooth transition to prevent jumps */
-    opacity: 0; /* Start with hidden image */
-}
-
-/* Show the image once it's loaded */
-#banner img.loaded {
-    opacity: 1;
-}
 
         /* Footer styling */
         footer {

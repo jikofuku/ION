@@ -987,35 +987,28 @@
 /* Ensure body and html fill the viewport */
 html, body {
     height: 100%;
-    overflow: hidden; /* Prevents scrollbars */
+    overflow: hidden; /* Prevent scrollbars */
 }
 
-/* Styling the Banner Section */
+/* Banner Section */
 #banner {
     position: relative;
     width: 100%; /* Full width of the viewport */
     height: 70vh; /* 70% of the viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Hides any overflow from the image */
-    background-color: #000; /* Fallback background color */
+    overflow: hidden; /* Hide any overflow */
 }
 
-/* Styling the Banner Image */
+/* Banner Image */
 #banner img {
-    width: 100%; /* Image scales to fit the width */
-    height: 100%; /* Image also scales to fit the height */
-    object-fit: cover; /* Ensures the image fills the section without distortion */
-    object-position: center; /* Keeps the image centered */
-    transition: none; /* Prevents any transition effects on load */
+    position: absolute; /* Positioning for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevents exceeding height */
+    transform: translate(-50%, -50%); /* Center the image */
+    object-fit: cover; /* Ensures it covers the space */
 }
-
-#banner img {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
-}
-
 
 	/* Footer styling */
         footer {

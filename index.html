@@ -83,34 +83,34 @@
 footer {
     background-color: #000;
     color: #fff;
-    padding: 5px 10px; /* Reduced padding */
+    padding: 5px 10px; /* Minimal padding */
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Handle smaller screens better */
+    flex-wrap: wrap; /* Handles smaller screens */
     align-items: center;
     width: 100%;
-    gap: 10px; /* Add some spacing between elements */
+    gap: 5px; /* Minimal gap between items */
 }
 
+/* Left and Right Sections */
 .footer-left, .footer-right {
     display: flex;
-    flex-wrap: wrap; /* Ensures items stack if needed */
+    flex-wrap: wrap;
     align-items: center;
-    gap: 10px; /* Create space between elements */
+    gap: 5px; /* Tight spacing */
 }
 
+/* Text Styling */
 .footer-left a, 
-.footer-left p {
-    margin: 0; 
-    font-size: 12px;
-}
-
+.footer-left p, 
 .footer-right p {
     margin: 0;
-    font-size: 12px;
-    text-align: right;
+    font-size: 12px; /* Maintain small font size */
+    line-height: 1.2; /* Compact line height */
+    text-align: center;
 }
 
+/* Footer Responsiveness */
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -119,10 +119,9 @@ footer {
 
     .footer-right {
         align-items: center;
-        text-align: center;
+        margin-top: 5px;
     }
 }
-
     </style>
 </head>
 

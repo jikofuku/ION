@@ -146,6 +146,14 @@
             const loader = document.getElementById('loader');
             loader.style.display = 'none'; // Hide loader once the page is fully loaded
         };
+
+            // Toggle the navigation menu
+    const navToggle = document.querySelector('.nav-toggle'); // Add a toggle button for mobile
+    const nav = document.getElementById('nav');
+
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('active'); // Toggle the active class
+    });
     </script>
 </body>
 </html>

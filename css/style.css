@@ -976,36 +976,49 @@ header .logo {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 10px;
+    top: 10px; /* Keep it slightly down from the top */
 }
 
 /* Adjust the logo positioning for desktop */
 header .logo {
-    left: 10px; /* Keep the logo on the left for desktop */
+    left: 10px; /* Logo on the left for desktop */
 }
 
-/* Adjustments for mobile view */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
     header .logo {
-        position: relative; /* Change position to relative for centering */
+        position: relative; /* Switch to relative positioning */
         left: 50%; /* Center the logo */
-        transform: translateX(-50%); /* Adjust for centering */
-        top: 5px; /* Slightly adjust top position if needed */
+        transform: translateX(-50%); /* Center the logo */
+        top: 10px; /* Adjust top spacing if needed */
     }
 
-    #nav {
-        margin-left: 0; /* Reset margin for mobile */
-        text-align: center; /* Center the nav items */
-    }
-    
-    #nav ul {
-        padding: 0; /* Reset padding for the ul */
-        margin: 0; /* Reset margin for the ul */
+    nav {
+        text-align: center; /* Center navigation items */
+        margin: 0; /* Reset margin */
+        position: relative; /* Ensure nav is positioned relative */
     }
 
-    #nav li {
-        display: block; /* Stack nav items vertically on mobile */
-        margin: 5px 0; /* Add some margin for spacing */
+    nav ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav li {
+        display: inline-block; /* Keep nav items horizontal for mobile */
+        margin: 0 10px; /* Add space between nav items */
+    }
+
+    /* Hide default mobile menu icon and show custom menu on click */
+    @media (max-width: 768px) {
+        #nav {
+            display: none; /* Hide mobile nav by default */
+        }
+        
+        /* Show mobile menu when active */
+        #nav.active {
+            display: block; /* Show when the mobile menu is activated */
+        }
     }
 }
 

@@ -971,6 +971,31 @@
 				right: 0;
 			}
 
+			 /* Banner Section Styling */
+			 .banner {
+				width: 100%; /* Full width of the screen */
+				position: relative; /* Maintain position in the layout */
+				overflow: hidden; /* Crop any overflow */
+			}
+		
+			.banner img {
+				width: 100%; /* Scale to fit the container width */
+				height: auto; /* Maintain the original aspect ratio */
+				display: block; /* Remove extra space below images */
+			}
+		
+			/* Mobile-Specific Adjustments */
+			@media (max-width: 768px) {
+				.banner {
+					height: auto; /* Let the image control height naturally */
+					padding: 10px; /* Optional: Add some padding if needed */
+				}
+		
+				.banner img {
+					object-fit: cover; /* Crop if necessary on smaller screens */
+				}
+			}
+
 /* Resetting default margins and paddings */
 * {
     margin: 0;

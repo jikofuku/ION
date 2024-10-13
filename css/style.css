@@ -1085,4 +1085,5 @@
 }
 
 #footer .icons a {
-    color: #111;
+    color: #bbb; /* Ensures icons are the same color */
+}

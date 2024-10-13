@@ -1007,39 +1007,3 @@ html, body {
     object-fit: cover; /* Ensure the image covers without stretching */
     transform: translate(-50%, -50%); /* Center the image */
 }
-
-
-/* Footer */
-#footer {
-    background: #111; /* Dark background */
-    padding: 2em 0; /* Reduced padding for a more compact footer */
-    color: #fff; /* Set footer text color to white for better contrast */
-    text-align: center; /* Centered text for a cleaner look */
-}
-
-#footer a {
-    color: #111; 
-    transition: color 0.3s; /* Smooth transition on hover */
-}
-
-#footer a:hover {
-    color: #111; 
-}
-
-.copyright {
-    font-size: 0.9em;
-    padding: 0;
-    width: 100%;
-    margin: 10px 0; /* Simplified margins */
-}
-
-.copyright {
-    display: inline-block;
-    list-style: none;
-    margin: 0; /* Removed extra margins */
-    padding: 0; /* Removed extra padding */
-}
-
-#footer .icons a {
-    color: #111; /* Ensures icons are the same color */
-}

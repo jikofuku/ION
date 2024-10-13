@@ -985,32 +985,33 @@ html, body {
 }
 
 /* Banner Section */
+/* Banner Section */
 #banner {
     position: relative;
     width: 100%; /* Full width of the viewport */
     height: 70vh; /* 70% of the viewport height */
     overflow: hidden; /* Hide any overflow */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
 }
 
 /* Banner Image */
 #banner img {
+    position: absolute; /* Positioning for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%; /* Ensure it covers the height */
+    transform: translate(-50%, -50%); /* Center the image */
     object-fit: cover; /* Ensures it covers the space */
-    max-width: none; /* Prevents image from shrinking */
-    max-height: none; /* Prevents image from shrinking */
+    /* Optional: Prevents flickering during loading */
+    transition: opacity 0.5s ease; 
+    opacity: 0; /* Start with an invisible image */
 }
 
-/* Optional: Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    #banner {
-        height: 50vh; /* Adjust height on smaller screens */
-    }
+/* Add this class to fade in the image */
+#banner img.loaded {
+    opacity: 1; /* Fade in */
 }
-
 
 	/* Footer styling */
         footer {

@@ -970,6 +970,26 @@
 			#header .container nav {
 				right: 0;
 			}
+			
+			/* Logo Styling */
+header .logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+header .logo img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#nav {
+    margin-left: 180px; /* Ensure nav doesn't overlap with the logo */
+}
+
+			
 
 	/* Footer styling */
         footer {

@@ -78,58 +78,51 @@
             width: 100%;
             padding: 20px;
         }
+        
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px; /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Handle smaller screens better */
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Add some spacing between elements */
+}
 
-        /* Footer Styles */
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+.footer-left, .footer-right {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items stack if needed */
+    align-items: center;
+    gap: 10px; /* Create space between elements */
+}
 
-        footer div {
-            display: flex;
-            justify-content: center;
-            flex-grow: 1;
-        }
+.footer-left a, 
+.footer-left p {
+    margin: 0; 
+    font-size: 12px;
+}
 
-        footer p, footer a {
-            margin: 0;
-            font-size: 12px;
-            padding: 0 10px;
-            text-decoration: none;
-            color: #fff;
-        }
+.footer-right p {
+    margin: 0;
+    font-size: 12px;
+    text-align: right;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 
-        .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            text-align: right;
-            margin-left: auto;
-            padding-left: 10px;
-        }
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
+}
 
-        @media (max-width: 768px) {
-            footer {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-right {
-                align-items: center;
-                text-align: center;
-                margin-top: 10px;
-                margin-left: 0;
-            }
-        }
     </style>
 </head>
 
@@ -159,20 +152,22 @@
     </section>
 	
 	<!-- Footer -->
-    <footer>
-        <div>
-            <p>&copy; 2024, Jiko Fuku</p>
-            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000984869-Exchanges-and-Returns" target="_blank">Refund Policy</a>
-            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000978409-Privacy?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Privacy Policy</a>
-            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000991325-Terms-Conditions?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Terms & Conditions</a>
-            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000993925-Shipping-Times-and-Costs?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Shipping Policy</a>
-            <a href="https://service.spreadshirt.com/hc/en-us/?shop_name=jiko-fuku&shop_id=1731330&platform=na" target="_blank">Help</a>
-        </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-left">
+        <p>&copy; 2024, Jiko Fuku</p>
+        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000984869-Exchanges-and-Returns" target="_blank">Refund Policy</a>
+        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000978409-Privacy?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Privacy Policy</a>
+        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000991325-Terms-Conditions?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Terms & Conditions</a>
+        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000993925-Shipping-Times-and-Costs?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Shipping Policy</a>
+        <a href="https://service.spreadshirt.com/hc/en-us/?shop_name=jiko-fuku&shop_id=1731330&platform=na" target="_blank">Help</a>
+    </div>
 
-        <div class="footer-right">
-            <p>Email: <span>service@spreadshirt.com</span></p>
-            <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
-        </div>
-    </footer>
+    <div class="footer-right">
+        <p>Email: <span>service@spreadshirt.com</span></p>
+        <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
+    </div>
+</footer>
+
 	
 	</body></html>

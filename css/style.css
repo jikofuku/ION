@@ -1007,3 +1007,56 @@ html, body {
     max-width: none; /* Prevent scaling the width */
     transform: translate(-50%, -50%); /* Center the image */
 }
+
+        /* Footer styling */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            width: 100%; /* Ensure footer spans the entire width */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer div {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        footer p, footer a {
+            margin: 0;
+            font-size: 12px;
+            padding: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            padding-left: 10px;
+            margin-left: auto;
+        }
+
+        /* Responsive Footer for small screens */
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-right {
+                text-align: center;
+                align-items: center;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }

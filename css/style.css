@@ -992,7 +992,7 @@ html, body {
 /* Banner Section */
 #banner {
     position: relative;
-    width: 100%;  /* Full width */
+    width: 100%; /* Full width */
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Prevent scrollbars */
 }
@@ -1002,8 +1002,8 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;  /* Make the image fill the width */
-    height: 100%; /* Make the image fill the height */
-    object-fit: cover; /* Ensure the image covers without stretching */
+    width: auto;  /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the banner */
+    max-width: none; /* Prevent scaling the width */
     transform: translate(-50%, -50%); /* Center the image */
 }

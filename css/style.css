@@ -971,67 +971,50 @@
 				right: 0;
 			}
 			
-/* General Header Styles */
-#header {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
-    position: relative; /* Position normally */
-    padding: 10px 0; /* Add padding */
+/* General Logo Styling */
+header .logo-desktop {
+    display: flex;
+    align-items: center;
+    position: relative; /* Keep it in normal flow */
 }
 
-/* Logo Container */
-.logo-container {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center the logo */
-    align-items: center; /* Center vertically */
-    position: relative; /* Position normally */
-    z-index: 10; /* Ensure it stays on top */
+header .logo-mobile {
+    display: none; /* Hide mobile logo by default */
 }
 
-/* Logo Styling */
-.logo {
-    max-width: 150px; /* Set a maximum width for the logo */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Navigation Styles */
-#nav {
-    position: relative; /* Position nav normally */
-    width: 100%; /* Full width */
-}
-
-#nav ul {
-    display: flex; /* Flexbox for nav items */
-    justify-content: center; /* Center nav items */
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-}
-
-/* Navigation Item Styles */
-#nav li {
-    margin: 0 10px; /* Space between items */
-}
-
-#nav a {
-    color: #ffffff; /* Keep link color */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Mobile Specific Adjustments */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
-    #nav {
-        position: absolute; /* Position nav absolutely */
-        top: 50px; /* Move nav below the logo */
-        right: 0; /* Align to the right */
-        width: 100%; /* Full width */
-        display: flex; /* Display as flex to allow center alignment */
-        justify-content: center; /* Center nav items */
+    header {
+        position: relative; /* Ensure header is relative */
+        padding: 10px 0; /* Add padding for spacing */
     }
 
-    #nav ul {
-        flex-direction: row; /* Keep items in a row */
+    header .logo-desktop {
+        display: none; /* Hide the desktop logo on mobile */
+    }
+
+    header .logo-mobile {
+        display: flex; /* Show mobile logo */
+        justify-content: center; /* Center it */
+        align-items: center; /* Center vertically */
+        position: relative; /* Position normally */
+        top: 10px; /* Adjust spacing from the top */
+        z-index: 10; /* Ensure it stays on top */
+    }
+
+    nav {
+        position: relative; /* Position nav normally */
+        text-align: center; /* Center nav items */
+    }
+
+    nav ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav li {
+        display: inline-block; /* Keep nav items horizontal */
+        margin: 0 10px; /* Space between items */
     }
 }
 

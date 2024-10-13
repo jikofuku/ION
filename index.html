@@ -1,33 +1,12 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <html lang="en">
 
 <head>
-    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Jikø Fükü</title>
 
-    <!-- Stylesheets -->
-    <noscript>
-        <link rel="stylesheet" href="css/skel.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style-xlarge.css">
-    </noscript>
-
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-
-    <!--[if lte IE 8]>
-        <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Inline CSS -->
     <style>
-        /* General Reset and Dark Theme */
         html, body {
             margin: 0;
             padding: 0;
@@ -38,86 +17,24 @@
             color: #fff;
             width: 100%;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
-        header {
-            background-color: #111;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        header h1 a {
-            color: #fff;
-            font-size: 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0;
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        /* Main Content */
         main {
-            min-height: 100vh;
+            flex: 1;
             width: 100%;
             padding: 20px;
         }
-        
-/* Footer Styles */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 5px 10px; /* Minimal padding */
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Handles smaller screens */
-    align-items: center;
-    width: 100%;
-    gap: 5px; /* Minimal gap between items */
-}
 
-/* Left and Right Sections */
-.footer-left, .footer-right {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5px; /* Tight spacing */
-}
-
-/* Text Styling */
-.footer-left a, 
-.footer-left p, 
-.footer-right p {
-    margin: 0;
-    font-size: 12px; /* Maintain small font size */
-    line-height: 1.2; /* Compact line height */
-    text-align: center;
-}
-
-/* Footer Styling */
-footer {
+        footer {
             background-color: #111;
             color: #fff;
             padding: 15px 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: auto;
         }
 
         footer div {
@@ -133,7 +50,6 @@ footer {
             text-align: right;
         }
 
-        /* Responsive Footer */
         @media (max-width: 768px) {
             footer {
                 flex-direction: column;
@@ -147,12 +63,10 @@ footer {
     </style>
 </head>
 
-<body id="top">
-
-    <!-- Header -->
-    <header id="header" class="skel-layers-fixed">
+<body>
+    <header>
         <h1><a href="#">Jikø Fükü</a></h1>
-        <nav id="nav">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="left-sidebar.html">Left Sidebar</a></li>
@@ -163,31 +77,30 @@ footer {
         </nav>
     </header>
 
-    <!-- Banner Section -->
-    <section id="banner">
-        <div class="inner">
-            <ul class="actions">
-                <li><a href="#content" class="button big special">SHOP NOW</a></li>
-            </ul>
-        </div>
-    </section>
-	
-	<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div>
-        <p>&copy; 2024, Jiko Fuku</p>
-        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000984869-Exchanges-and-Returns" target="_blank">Refund Policy</a>
-        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000978409-Privacy" target="_blank">Privacy Policy</a>
-        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000991325-Terms-Conditions" target="_blank">Terms & Conditions</a>
-        <a href="https://service.spreadshirt.com/hc/en-us/articles/115000993925-Shipping-Times-and-Costs" target="_blank">Shipping Policy</a>
-        <a href="https://service.spreadshirt.com/hc/en-us/" target="_blank">Help</a>
-    </div>
+    <main>
+        <section id="banner">
+            <div class="inner">
+                <ul class="actions">
+                    <li><a href="#content" class="button big special">SHOP NOW</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    <div class="footer-right">
-        <p>Email: <span>service@spreadshirt.com</span></p>
-        <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
-    </div>
-</footer>
-	</body>
-    </html>
+    <footer>
+        <div>
+            <p>&copy; 2024, Jiko Fuku</p>
+            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000984869-Exchanges-and-Returns" target="_blank">Refund Policy</a>
+            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000978409-Privacy" target="_blank">Privacy Policy</a>
+            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000991325-Terms-Conditions" target="_blank">Terms & Conditions</a>
+            <a href="https://service.spreadshirt.com/hc/en-us/articles/115000993925-Shipping-Times-and-Costs" target="_blank">Shipping Policy</a>
+            <a href="https://service.spreadshirt.com/hc/en-us/" target="_blank">Help</a>
+        </div>
+
+        <div class="footer-right">
+            <p>Email: <span>service@spreadshirt.com</span></p>
+            <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
+        </div>
+    </footer>
+</body>
+</html>
